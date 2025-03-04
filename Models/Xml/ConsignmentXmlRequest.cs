@@ -5,6 +5,7 @@ namespace DSEConETL.Models.Xml;
 [XmlRoot("Consignment")]
 public class ConsignmentXmlRequest
 {
+    [XmlElement("AccountCode")]
     public string AccountCode { get; set; }
     public string ServiceType { get; set; }
     public string? ConsignmentInstructions { get; set; }
@@ -66,4 +67,7 @@ public class ConsignmentItemXmlRequest
     public string? Sku { get; set; }
     public string? ItemReference { get; set; }
     public string? Barcode { get; set; }
+    
+    [XmlIgnore]
+    public int UnitId { get; set; }
 }

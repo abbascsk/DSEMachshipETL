@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DSEConETL.Entities;
 
 [Table("consignment_item", Schema = "dbo")]
-public partial class ConsignmentItem
+public class ConsignmentItem
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
