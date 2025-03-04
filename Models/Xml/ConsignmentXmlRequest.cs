@@ -5,6 +5,7 @@ namespace DSEConETL.Models.Xml;
 [XmlRoot("Consignment")]
 public class ConsignmentXmlRequest
 {
+    public string AccountCode { get; set; }
     public string ServiceType { get; set; }
     public string? ConsignmentInstructions { get; set; }
     public DateTime? DispatchDate { get; set; }

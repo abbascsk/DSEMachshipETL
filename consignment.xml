@@ -1,0 +1,73 @@
+<Consignment>
+  <AccountCode>CUST01</AccountCode>
+  <ServiceType>Standard</ServiceType>
+  <ConsignmentInstructions>Handle with care</ConsignmentInstructions>
+  <DispatchDate>2025-03-10T00:00:00</DispatchDate>
+  <SenderName>ABC Company</SenderName>
+  <SenderStreet>123 Sender Street</SenderStreet>
+  <SenderSuburb>Sendersville</SenderSuburb>
+  <SenderState>NSW</SenderState>
+  <SenderPostcode>2000</SenderPostcode>
+  <SenderCountry>Australia</SenderCountry>
+  <SenderEmail>sender@example.com</SenderEmail>
+  <SenderContact>John Smith</SenderContact>
+  <SenderPhone>0212345678</SenderPhone>
+  <SenderMobile>0412345678</SenderMobile>
+  <SenderSiteInfo>Gate 3 entrance</SenderSiteInfo>
+  <SenderRef>ABC-123</SenderRef>
+  <PickupInstructions>Call 15 minutes before arrival</PickupInstructions>
+  <PickupStartTime>2025-03-10T09:00:00</PickupStartTime>
+  <PickupEndTime>2025-03-10T17:00:00</PickupEndTime>
+  <ReceiverName>XYZ Corporation</ReceiverName>
+  <ReceiverStreet>456 Receiver Road</ReceiverStreet>
+  <ReceiverSuburb>Receiverville</ReceiverSuburb>
+  <ReceiverState>VIC</ReceiverState>
+  <ReceiverPostcode>3000</ReceiverPostcode>
+  <ReceiverCountry>Australia</ReceiverCountry>
+  <ReceiverEmail>receiver@example.com</ReceiverEmail>
+  <ReceiverContact>Jane Doe</ReceiverContact>
+  <ReceiverPhone>0387654321</ReceiverPhone>
+  <ReceiverMobile>0487654321</ReceiverMobile>
+  <ReceiverSiteInfo>Loading dock B</ReceiverSiteInfo>
+  <ReceiverRef>XYZ-456</ReceiverRef>
+  <DeliveryInstructions>Business hours only</DeliveryInstructions>
+  <DeliveryStartTime>2025-03-11T09:00:00</DeliveryStartTime>
+  <DeliveryEndTime>2025-03-11T17:00:00</DeliveryEndTime>
+  <DangerousGoods>false</DangerousGoods>
+  <TailLift>true</TailLift>
+  <Atl>false</Atl>
+  <HandUnload>false</HandUnload>
+  <TwoMenRequired>true</TwoMenRequired>
+  <PalletType>Standard</PalletType>
+  <PalletExchangeType>One-for-One</PalletExchangeType>
+  <Items>
+    <Item>
+      <UnitName>Pallet</UnitName>
+      <LineNo>1</LineNo>
+      <ItemDescription>Electronic Components</ItemDescription>
+      <Weight>250.5</Weight>
+      <Length>120</Length>
+      <Width>80</Width>
+      <Height>100</Height>
+      <Stackable>false</Stackable>
+      <Reorient>false</Reorient>
+      <Sku>EC-12345</Sku>
+      <ItemReference>Batch-001</ItemReference>
+      <Barcode>1234567890123</Barcode>
+    </Item>
+    <Item>
+      <UnitName>Carton</UnitName>
+      <LineNo>2</LineNo>
+      <ItemDescription>Office Supplies</ItemDescription>
+      <Weight>15.2</Weight>
+      <Length>40</Length>
+      <Width>30</Width>
+      <Height>25</Height>
+      <Stackable>true</Stackable>
+      <Reorient>true</Reorient>
+      <Sku>OS-67890</Sku>
+      <ItemReference>Batch-002</ItemReference>
+      <Barcode>9876543210987</Barcode>
+    </Item>
+  </Items>
+</Consignment>
