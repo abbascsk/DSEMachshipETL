@@ -56,7 +56,7 @@
             <Barcode>1234567890123</Barcode>
         </Item>
         <Item>
-            <UnitName>Carton</UnitName>
+            <UnitName>Pallet</UnitName>
             <LineNo>2</LineNo>
             <ItemDescription>Office Supplies</ItemDescription>
             <Weight>15.2</Weight>
