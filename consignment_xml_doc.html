@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documented Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Consignment Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Field Name</th>
+                <th>Data Type</th>
+                <th>Mandatory</th>
+                <th>Example/Accepted Values</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>AccountCode</td><td>string</td><td>Yes</td><td>TEST</td></tr>
+            <tr><td>ServiceType</td><td>string</td><td>Yes</td><td>General|Express</td></tr>
+            <tr><td>ConsignmentInstructions</td><td>string</td><td>No</td><td>Handle with care</td></tr>
+            <tr><td>DispatchDate</td><td>datetime</td><td>Yes</td><td>2025-03-10T00:00:00</td></tr>
+            <tr><td>SenderName</td><td>string</td><td>No</td><td>ABC Company</td></tr>
+            <tr><td>SenderStreet</td><td>string</td><td>Yes</td><td>123 Sender Street</td></tr>
+            <tr><td>SenderSuburb</td><td>string</td><td>Yes</td><td>Sendersville</td></tr>
+            <tr><td>SenderState</td><td>string</td><td>Yes</td><td>NSW</td></tr>
+            <tr><td>SenderPostcode</td><td>string</td><td>Yes</td><td>2000</td></tr>
+            <tr><td>SenderCountry</td><td>string</td><td>Yes</td><td>Australia</td></tr>
+            <tr><td>SenderEmail</td><td>string</td><td>No</td><td>sender@example.com</td></tr>
+            <tr><td>SenderContact</td><td>string</td><td>No</td><td>John Smith</td></tr>
+            <tr><td>SenderPhone</td><td>string</td><td>No</td><td>0212345678</td></tr>
+            <tr><td>SenderMobile</td><td>string</td><td>No</td><td>0412345678</td></tr>
+            <tr><td>SenderSiteInfo</td><td>string</td><td>No</td><td>Gate 3 entrance</td></tr>
+            <tr><td>SenderRef</td><td>string</td><td>No</td><td>ABC-123</td></tr>
+            <tr><td>PickupInstructions</td><td>string</td><td>No</td><td>Call 15 minutes before arrival</td></tr>
+            <tr><td>PickupStartTime</td><td>datetime</td><td>No</td><td>2025-03-10T09:00:00</td></tr>
+            <tr><td>PickupEndTime</td><td>datetime</td><td>No</td><td>2025-03-10T17:00:00</td></tr>
+            <tr><td>ReceiverName</td><td>string</td><td>No</td><td>XYZ Corporation</td></tr>
+            <tr><td>ReceiverStreet</td><td>string</td><td>Yes</td><td>456 Receiver Road</td></tr>
+            <tr><td>ReceiverSuburb</td><td>string</td><td>Yes</td><td>Receiverville</td></tr>
+            <tr><td>ReceiverState</td><td>string</td><td>Yes</td><td>VIC</td></tr>
+            <tr><td>ReceiverPostcode</td><td>string</td><td>Yes</td><td>3000</td></tr>
+            <tr><td>ReceiverCountry</td><td>string</td><td>Yes</td><td>Australia</td></tr>
+            <tr><td>ReceiverEmail</td><td>string</td><td>No</td><td>receiver@example.com</td></tr>
+            <tr><td>ReceiverContact</td><td>string</td><td>No</td><td>Jane Doe</td></tr>
+            <tr><td>ReceiverPhone</td><td>string</td><td>No</td><td>0387654321</td></tr>
+            <tr><td>ReceiverMobile</td><td>string</td><td>No</td><td>0487654321</td></tr>
+            <tr><td>ReceiverSiteInfo</td><td>string</td><td>No</td><td>Loading dock B</td></tr>
+            <tr><td>ReceiverRef</td><td>string</td><td>No</td><td>XYZ-456</td></tr>
+            <tr><td>DeliveryInstructions</td><td>string</td><td>No</td><td>Business hours only</td></tr>
+            <tr><td>DeliveryStartTime</td><td>datetime</td><td>No</td><td>2025-03-11T09:00:00</td></tr>
+            <tr><td>DeliveryEndTime</td><td>datetime</td><td>No</td><td>2025-03-11T17:00:00</td></tr>
+            <tr><td>DangerousGoods</td><td>boolean</td><td>No</td><td>false</td></tr>
+            <tr><td>TailLift</td><td>boolean</td><td>No</td><td>true</td></tr>
+            <tr><td>Atl</td><td>boolean</td><td>No</td><td>false</td></tr>
+            <tr><td>HandUnload</td><td>boolean</td><td>No</td><td>false</td></tr>
+            <tr><td>TwoMenRequired</td><td>boolean</td><td>No</td><td>true</td></tr>
+            <tr><td>PalletType</td><td>string</td><td>No</td><td>Customer|Loscom|Chep</td></tr>
+            <tr><td>PalletExchangeType</td><td>string</td><td>No</td><td>Exchange|Transfer</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Item Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Field Name</th>
+                <th>Data Type</th>
+                <th>Mandatory</th>
+                <th>Example Value (Item 1)</th>
+                <th>Example Value (Item 2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>UnitName</td><td>string</td><td>No</td><td>Pallet|Crate|Box|Parcel|Skid|Stillage|Other</td><td>Pallet|Crate|Box|Parcel|Skid|Stillage|Other</td></tr>
+            <tr><td>LineNo</td><td>integer</td><td>No</td><td>1</td><td>2</td></tr>
+            <tr><td>ItemDescription</td><td>string</td><td>Yes</td><td>Electronic Components</td><td>Office Supplies</td></tr>
+            <tr><td>Weight (kg)</td><td>decimal</td><td>Yes</td><td>250.5</td><td>15.2</td></tr>
+            <tr><td>Length (mm)</td><td>integer</td><td>Yes</td><td>120</td><td>40</td></tr>
+            <tr><td>Width (mm)</td><td>integer</td><td>Yes</td><td>80</td><td>30</td></tr>
+            <tr><td>Height (mm)</td><td>integer</td><td>Yes</td><td>100</td><td>25</td></tr>
+            <tr><td>Stackable</td><td>boolean</td><td>No</td><td>false</td><td>true</td></tr>
+            <tr><td>Reorient</td><td>boolean</td><td>No</td><td>false</td><td>true</td></tr>
+            <tr><td>Sku</td><td>string</td><td>No</td><td>EC-12345</td><td>EC-12346</td></tr>
+			<tr><td>ItemReference</td><td>string</td><td>No</td><td>Batch-002</td><td>Batch-001</td></tr>
+			<tr><td>Barcode</td><td>string</td><td>No</td><td>1234567890123</td><td>9876543210987</td></tr>
+		</tbody>
+	</Table>
