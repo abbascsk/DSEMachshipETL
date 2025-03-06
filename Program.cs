@@ -31,6 +31,8 @@ var builder = Host.CreateDefaultBuilder(args)
 
         services.AddAutoMapper(typeof(Program).Assembly);
         services.AddSingleton<Profile, MappingProfile>();
+        services.AddScoped<EmailService>();
+        services.AddScoped<Logger>();
         services.AddScoped<DseXmlEtlService>();
     });
 

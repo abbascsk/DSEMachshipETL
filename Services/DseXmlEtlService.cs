@@ -10,7 +10,8 @@ using Microsoft.Extensions.Options;
 
 namespace DSEConETL.Services;
 
-public class DseXmlEtlService(IOptions<GeneralSettings> generalSettings, IMapper mapper, DseDbContext dbContext)
+public class DseXmlEtlService(IOptions<GeneralSettings> generalSettings, IOptions<EmailSettings> emailSettings, 
+    IMapper mapper, DseDbContext dbContext, Logger logger, EmailService emailService)
 {
     public async Task GetNewConsignments()
     {
@@ -45,10 +46,14 @@ public class DseXmlEtlService(IOptions<GeneralSettings> generalSettings, IMapper
 
                     var customer = await dbContext.Customers
                         .Where(x => x.customer_code.ToUpper() == request.AccountCode.ToUpper().Trim())
+                        .Include(customer => customer.Branch)
                         .FirstOrDefaultAsync();
                     
                     if(customer == null)
                         throw new Exception($"Customer account code is not found \"{request.AccountCode}\"");
+
+                    var notificationEmail =
+                        customer.Branch.api_notification_email ?? emailSettings.Value.DefaultToEmail;
 
                     var customerSetting =
                         await dbContext.CustomerSettings.FirstOrDefaultAsync(x =>
@@ -131,20 +136,27 @@ public class DseXmlEtlService(IOptions<GeneralSettings> generalSettings, IMapper
                     
                     await dbContext.ConsignmentItems.AddRangeAsync(consignmentItems);
                     await dbContext.SaveChangesAsync();
-                    
-                    File.Move(file, destFile);
+
+                    var con_id = consignment.consignment_id;
+                    consignment = await
+                        dbContext.Consignments.FirstOrDefaultAsync(x => x.consignment_id == con_id);
                     
                     Console.WriteLine($"DSE XML Parser: Consignment created {consignment.consignment_id}");
+                    emailService.SendEmailWithAttachment("system@dsetrucks.com.au", "DSE Con ETL", notificationEmail, "New Job received", $"<p>New consignment created: ${consignment.consignment_no_full}</p>", file);
+                    
+                    File.Move(file, destFile);
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"DSE XML Parser Error: {ex.InnerException?.Message ?? ex.Message}");
+                    logger.LogError(ex.InnerException?.Message ?? ex.Message);
                 }
             }
         }
         catch (Exception ex)
         {
             Console.WriteLine($"DSE XML Parser Error: {ex.InnerException?.Message ?? ex.Message}");
+            logger.LogError(ex.InnerException?.Message ?? ex.Message);
             // throw;
         }
     }

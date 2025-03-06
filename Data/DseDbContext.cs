@@ -5,6 +5,7 @@ namespace DSEConETL.Data;
 
 public class DseDbContext(DbContextOptions<DseDbContext> options) : DbContext(options)
 {
+    public DbSet<Branch> Branches { get; set; }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<CustomerSetting> CustomerSettings { get; set; }
     public DbSet<ConsignmentServiceType> ConsignmentServiceTypes { get; set; }

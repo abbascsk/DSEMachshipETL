@@ -52,4 +52,7 @@ public class Customer
     public string? created_by { get; set; }
     public DateTime? updated_at { get; set; }
     public string? updated_by { get; set; }
+    
+    [ForeignKey("branch_id")]
+    public virtual Branch Branch { get; set; }
 }

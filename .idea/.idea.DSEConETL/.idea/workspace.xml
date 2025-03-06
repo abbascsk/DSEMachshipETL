@@ -8,7 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9e8df53-65a9-4cc9-b3dc-daea7b6c8bb5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Entities/Branch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/EmailService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Logger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DSEConETL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DSEConETL/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DSEFlatFileETL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DSEFlatFileETL/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSEConETL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DSEConETL.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DseDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DseDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/DseXmlEtlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/DseXmlEtlService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +59,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.DSEConETL">
+  <component name="RunManager">
     <configuration name="DSEConETL" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -98,6 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740424648673</updated>
       <workItem from="1740424649736" duration="4835000" />
+      <workItem from="1741255761503" duration="2959000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -115,6 +124,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
