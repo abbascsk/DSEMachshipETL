@@ -45,6 +45,7 @@ async Task RunApplicationAsync(IServiceProvider serviceProvider)
     var services = scope.ServiceProvider;
     
     var dseXmlService = services.GetRequiredService<DseXmlEtlService>();
+    var logger = services.GetRequiredService<Logger>();
 
     try
     {
@@ -54,5 +55,6 @@ async Task RunApplicationAsync(IServiceProvider serviceProvider)
     catch (Exception ex)
     {
         Console.WriteLine($"Error: {ex.Message}");
+        logger.LogError(ex.InnerException?.Message ?? ex.Message);
     }
 }
