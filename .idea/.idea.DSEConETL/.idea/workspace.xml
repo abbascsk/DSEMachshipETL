@@ -8,37 +8,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e8df53-65a9-4cc9-b3dc-daea7b6c8bb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/Csv/ConsignmentCsvRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Xml/ManifestXmlRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DSEConETL/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DSEConETL/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DSEConETL/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DSEConETL/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="d9e8df53-65a9-4cc9-b3dc-daea7b6c8bb5" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/Services/MachshipCsvEtlService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in/447_20220826110709195.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in/MUVELCM_20231009131254454.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in/MUVELCM_20231018142755979.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in/TW Fulfillment_20230731162655122.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in/TW Fulfillment_20240924134017959.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DSEConETL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DSEConETL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoMapper/AutoMapperExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoMapper/AutoMapperExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoMapper/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoMapper/MappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSEConETL.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSEConETL.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DSEMachshipETL.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DseDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DseDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Branch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Branch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Consignment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Consignment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/ConsignmentItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/ConsignmentItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/ConsignmentServiceType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/ConsignmentServiceType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Customer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/CustomerSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/CustomerSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/PalletExchangeType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/PalletExchangeType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/PalletType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/PalletType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extensions/StringExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Extensions/StringExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/EmailSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/EmailSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/GeneralSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/GeneralSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Xml/ConsignmentXmlRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSEMachshipETL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DSEMachshipETL.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/DseXmlEtlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/MachshipXmlEtlService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/EmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/EmailService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Logger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/MachshipXmlEtlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/MachshipXmlEtlService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/in/con_02.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/in/consignment.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +34,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/abbascsk/Developer/netcoreprojects/DSEMachshipETL/AutoMapper/AutoMapperExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DseDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Entities/Branch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Entities/Consignment.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,6 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Services/EmailService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Logger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/MachshipXmlEtlService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/abbascsk/Developer/netcoreprojects/DSEMachshipETL/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net8.0/DSEConETL.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -87,6 +71,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;.NET Project.DSEConETL.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Project.DSEMachshipETL.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -104,7 +89,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.DSEConETL">
+  <component name="RunManager" selected=".NET Project.DSEMachshipETL">
     <configuration name="DSEConETL" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -171,7 +156,7 @@
       <workItem from="1740424649736" duration="4835000" />
       <workItem from="1741255761503" duration="3776000" />
       <workItem from="1741747750907" duration="505000" />
-      <workItem from="1742404674892" duration="7668000" />
+      <workItem from="1742404674892" duration="11655000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -213,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741747882186</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1742752322101</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742752322101</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,11 +227,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial commit" />
     <MESSAGE value="logging and email added" />
     <MESSAGE value="html incomplete fix" />
     <MESSAGE value="unit name compulsory" />
     <MESSAGE value="error logging for unhandled errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="error logging for unhandled errors" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>

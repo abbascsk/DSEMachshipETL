@@ -34,6 +34,7 @@ var builder = Host.CreateDefaultBuilder(args)
         services.AddScoped<EmailService>();
         services.AddScoped<Logger>();
         services.AddScoped<MachshipXmlEtlService>();
+        services.AddScoped<MachshipCsvEtlService>();
     });
 
 using var host = builder.Build();
@@ -45,12 +46,14 @@ async Task RunApplicationAsync(IServiceProvider serviceProvider)
     var services = scope.ServiceProvider;
     
     var dseXmlService = services.GetRequiredService<MachshipXmlEtlService>();
+    var dseCsvService = services.GetRequiredService<MachshipCsvEtlService>();
     var logger = services.GetRequiredService<Logger>();
 
     try
     {
         Console.WriteLine("Starting DSE Machship Consignment ETL Service...");
         await dseXmlService.GetNewConsignments();
+        await dseCsvService.GetNewConsignments();
     }
     catch (Exception ex)
     {

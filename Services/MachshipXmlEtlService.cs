@@ -12,7 +12,7 @@ using Microsoft.Extensions.Options;
 namespace DSEMachshipETL.Services;
 
 public class MachshipXmlEtlService(IOptions<GeneralSettings> generalSettings, IOptions<EmailSettings> emailSettings, 
-    IMapper mapper, DseDbContext dbContext, Logger logger, EmailService emailService)
+    DseDbContext dbContext, Logger logger, EmailService emailService)
 {
     public async Task GetNewConsignments()
     {
