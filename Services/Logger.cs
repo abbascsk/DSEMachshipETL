@@ -1,7 +1,7 @@
-using DSEConETL.Models;
+using DSEMachshipETL.Models;
 using Microsoft.Extensions.Options;
 
-namespace DSEConETL.Services;
+namespace DSEMachshipETL.Services;
 
 public class Logger(IOptions<EmailSettings> emailSettings, EmailService emailService)
 {

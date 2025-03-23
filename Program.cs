@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using AutoMapper;
-using DSEConETL.AutoMapper;
-using DSEConETL.Data;
-using DSEConETL.Models;
-using DSEConETL.Services;
+using DSEMachshipETL.AutoMapper;
+using DSEMachshipETL.Data;
+using DSEMachshipETL.Models;
+using DSEMachshipETL.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -33,7 +33,7 @@ var builder = Host.CreateDefaultBuilder(args)
         services.AddSingleton<Profile, MappingProfile>();
         services.AddScoped<EmailService>();
         services.AddScoped<Logger>();
-        services.AddScoped<DseXmlEtlService>();
+        services.AddScoped<MachshipXmlEtlService>();
     });
 
 using var host = builder.Build();
@@ -44,12 +44,12 @@ async Task RunApplicationAsync(IServiceProvider serviceProvider)
     using var scope = serviceProvider.CreateScope();
     var services = scope.ServiceProvider;
     
-    var dseXmlService = services.GetRequiredService<DseXmlEtlService>();
+    var dseXmlService = services.GetRequiredService<MachshipXmlEtlService>();
     var logger = services.GetRequiredService<Logger>();
 
     try
     {
-        Console.WriteLine("Starting DSE Consignment ETL Service...");
+        Console.WriteLine("Starting DSE Machship Consignment ETL Service...");
         await dseXmlService.GetNewConsignments();
     }
     catch (Exception ex)

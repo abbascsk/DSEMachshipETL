@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DSEConETL.Entities;
+namespace DSEMachshipETL.Entities;
 
 [Table("customer", Schema = "dbo")]
 public class Customer

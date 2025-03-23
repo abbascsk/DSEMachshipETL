@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DSEConETL.Entities;
+namespace DSEMachshipETL.Entities;
 
 [Table("pallet_type", Schema = "dbo")]
 public partial class PalletType

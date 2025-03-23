@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
 using AutoMapper;
 
-namespace DSEConETL.AutoMapper;
+namespace DSEMachshipETL.AutoMapper;
 
 public static class AutoMapperExtensions
 {

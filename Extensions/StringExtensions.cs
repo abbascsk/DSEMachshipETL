@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace DSEConETL.Extensions;
+namespace DSEMachshipETL.Extensions;
 
 public static class StringExtensions
 {

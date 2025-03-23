@@ -1,7 +1,7 @@
-using DSEConETL.Entities;
+using DSEMachshipETL.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace DSEConETL.Data;
+namespace DSEMachshipETL.Data;
 
 public class DseDbContext(DbContextOptions<DseDbContext> options) : DbContext(options)
 {

@@ -1,18 +1,18 @@
 using System.Text.RegularExpressions;
 using AutoMapper;
-using DSEConETL.Entities;
-using DSEConETL.Models.Xml;
+using DSEMachshipETL.Entities;
+using DSEMachshipETL.Models.Xml;
 
-namespace DSEConETL.AutoMapper;
+namespace DSEMachshipETL.AutoMapper;
 
 public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<ConsignmentItemXmlRequest, ConsignmentItem>()
-            .UseDestinationNamingConvention();
-        
-        CreateMap<ConsignmentXmlRequest, Consignment>()
-            .UseDestinationNamingConvention();
+        // CreateMap<ItemXmlRequest, ConsignmentItem>();
+            // .UseDestinationNamingConvention();
+
+        // CreateMap<ConsignmentXmlRequest, Consignment>();
+            //.UseDestinationNamingConvention();
     }
 }

@@ -1,4 +1,4 @@
-namespace DSEConETL.Models;
+namespace DSEMachshipETL.Models;
 
 public class GeneralSettings
 {

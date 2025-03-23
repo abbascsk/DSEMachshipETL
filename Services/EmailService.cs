@@ -1,10 +1,10 @@
 using System.Net;
-using DSEConETL.Models;
+using DSEMachshipETL.Models;
 using Mandrill;
 using Mandrill.Model;
 using Microsoft.Extensions.Options;
 
-namespace DSEConETL.Services;
+namespace DSEMachshipETL.Services;
 
 public class EmailService(IOptions<EmailSettings> emailSettings)
 {
